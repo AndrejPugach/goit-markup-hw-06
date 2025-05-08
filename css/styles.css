@@ -32,6 +32,19 @@ button {
     margin: 0 auto; 
 }
 
+@media (min-width:768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width:1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+}
+
 .section {
     padding: 120px 0;
 }
@@ -133,6 +146,130 @@ button {
     color: #404bbf;
 }
 
+.burger-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+ .burger-icon {
+     display: block;
+     fill: #2f2f37;
+ }
+
+  @media screen and (min-width:768px) {
+      .header-logo {
+          padding: 24px 0;
+          margin-right: 120px;
+      }
+
+      .burger-btn {
+          display: none;
+      }
+
+      .nav-list {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+      }
+
+      .contascts-list {
+          display: block;
+      }
+
+      .header-nav {
+          display: flex;
+          align-items: center;
+      }
+
+      .current.nav-link {
+          position: relative;
+          color: #404bbf;
+      }
+
+      .current.nav-link::after {
+          content: "";
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          height: 4px;
+          background-color: #404bbf;
+          border-radius: 2px;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus,
+      .contacts-link:hover,
+      .contacts-link:focus .current.nav-link {
+          color: #404bbf;
+      }
+
+      .contascts-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+      }
+
+      .contacts-link {
+          padding: 24px 0;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 1.17;
+          letter-spacing: 0.04em;
+          color: #434455;
+          text-decoration: none;
+          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+  }
+
+   @media screen and (min-width:1158px) {
+       .header-logo {
+           margin-right: 76px;
+       }
+
+       .contascts-list {
+           flex-direction: row;
+           align-items: center;
+           gap: 40px;
+       }
+
+       .contacts-link {
+           font-size: 16px;
+           line-height: 1.5;
+           letter-spacing: 0.02em;
+       }
+   }
+
+   /* MOBILE-MENU */
+
+   .mobile-menu {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: #fff;
+
+       opacity: 0;
+       visibility: hidden;
+       pointer-events: none;
+
+       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   .mobile-menu.is-open {
+       opacity: 1;
+       visibility: visible;
+       pointer-events: auto;
+   }
+
+   @media screen and (min-width:768px) {
+       .mobile-menu {
+           display: none;
+       }
+   }
+
 .main-section {
     max-width: 1440px;
     max-height: 600px;
@@ -145,6 +282,49 @@ button {
     background-size: cover;
     background-position: center;
 }
+
+ @media (min-resolution:2x) {
+    .main-section {
+         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                 rgba(46, 47, 66, 0.7)),
+             url("../images/mob-bg@2x.jpg");
+     }
+ }
+
+ @media screen and (min-width:768px) {
+    .main-section {
+         padding: 112px 0;
+         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                 rgba(46, 47, 66, 0.7)),
+             url("../images/tab-bg@1x.jpg");
+     }
+
+     @media (min-resolution:2x) {
+        .main-section {
+             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                     rgba(46, 47, 66, 0.7)),
+                 url("../images/tab-bg@2x.jpg");
+         }
+     }
+ }
+
+ @media screen and (min-width:1158px) {
+    .main-section {
+         padding: 188px 0;
+         max-width: 1440px;
+         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                 rgba(46, 47, 66, 0.7)),
+             url("../images/desk-bg@1x.jpg");
+     }
+
+     @media (min-resolution:2x) {
+        .main-section {
+             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                     rgba(46, 47, 66, 0.7)),
+                 url("../images/desk-bg@2x.jpg");
+         }
+     }
+ }
 
 .main-banner {
     display: flex;
@@ -165,6 +345,13 @@ button {
     margin: 0 auto;
     margin-bottom: 48px;
     max-width: 496px;
+}
+
+@media screen and (min-width:768px) {
+    .main-title {
+        font-size: 56px;
+        max-width: 496px;
+    }
 }
 
 .main-button {
@@ -188,6 +375,18 @@ button {
    
 }
 
+ @media screen and (min-width:768px) {
+    .main-button {
+         margin: 36px auto 0;
+     }
+ }
+
+ @media screen and (min-width:1158px) {
+    .main-button {
+         margin: 48px auto 0;
+     }
+ }
+
 .main-button:hover,
 .main-button:focus {
     background: #404bbf;
@@ -195,6 +394,18 @@ button {
 
 .advantages-section {
     padding: 120px 0;
+}
+
+@media only screen and (min-width:768px) {
+    .advantages-section {
+        padding: 96px 0;
+    }
+}
+
+@media (min-width:1158px) {
+    .advantages-section {
+        padding: 120px 0;
+    }
 }
 
 .advantages-container {
@@ -219,6 +430,34 @@ button {
     gap: 24px;
 }
 
+/* Mobile styles */
+.features-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    max-width: 288px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width:768px) {
+    .advantages-section-list {
+        max-width: 736px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+}
+
+@media only screen and (min-width:1158px) {
+    .advantages-section-list {
+        max-width: 1128px;
+        display: flex;
+        gap: 24px;
+    }
+}
+
 .section-icons {
     display: flex;
     border: 1px solid #8e8f99;
@@ -231,6 +470,21 @@ button {
     align-items: center;
     padding: 24px 100px;
     margin-bottom: 8px;
+}
+
+@media only screen and (min-width:1158px) {
+    .section-icons {
+        width: 264px;
+        height: 112px;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        background-color: #f4f4fd;
+        display: flex;
+        padding: 24px 100px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
 }
 
 .advantages-section-icons {
@@ -247,9 +501,34 @@ button {
     margin-bottom: 8px;
 }
 
+@media only screen and (min-width:1158px) {
+    .features-subtitle {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+    }
+}
+
 .advantages-section-item {
     width: 264px;
     flex-direction: column;
+}
+
+@media only screen and (min-width:768px) {
+    .advantages-section-item {
+        max-width: 356px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width:1158px) {
+    .advantages-section-item {
+        width: calc((100% - 72px) / 4);
+    }
 }
 
 .advantages-section-text {
@@ -260,9 +539,25 @@ button {
     color: #434455;
 }
 
+@media only screen and (min-width:1158px) {
+    .advantages-section-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
+}
+
 .section-team {
     background: #f4f4fd;
     padding: 120px 0 120px;
+}
+
+@media only screen and (min-width:1158px) {
+    .section-team {
+        padding: 120px 0;
+    }
 }
 
 .team-cotainer {
@@ -283,6 +578,26 @@ button {
     display: flex;
     gap: 24px;
 }
+
+ @media screen and (min-width:768px) {
+    .section-team-list {
+         max-width: 768px;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 24px;
+         margin: 0 auto;
+     }
+ }
+
+ @media only screen and (min-width:1158px) {
+    .section-team-list {
+         justify-content: center;
+         flex-wrap: nowrap;
+         gap: 24px;
+     }
+ }
 
 .section-team-item {
     border-radius: 0 0 4px 4px;
@@ -482,6 +797,12 @@ button {
     padding: 100px 0;
 }
 
+ @media only screen and (min-width:1158px) {
+    .page-footer {
+         padding: 100px 0;
+     }
+ }
+
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -491,9 +812,42 @@ button {
     align-items: baseline;
 }
 
+ @media only screen and (min-width:768px) {
+     .footer-container {
+         flex-direction: row;
+         flex-wrap: wrap;
+         gap: 72px 24px;
+     }
+ }
+
+ @media screen and (min-width:768px) and (max-width:1157px) {
+     .footer-container {
+         max-width: 584px;
+     }
+ }
+
+ @media only screen and (min-width:1158px) {
+     .footer-container {
+         flex-wrap: nowrap;
+         gap: unset;
+     }
+ }
+
 .footer-left-text {
     margin-right: 120px;
 }
+
+ @media only screen and (min-width:768px) {
+    .footer-left-text {
+         text-align: left;
+     }
+ }
+
+ @media only screen and (min-width:1158px) {
+    .footer-left-text {
+         margin-right: 120px;
+     }
+ }
 
 .footer-logo {
     display: inline-block;
@@ -531,6 +885,12 @@ button {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
+}
+
+@media only screen and (min-width:768px) {
+    .footer-social-title {
+        text-align: left;
+    }
 }
 
 .footer-ul {
@@ -576,6 +936,12 @@ button {
     flex-direction: column;
 }
 
+@media only screen and (min-width:1158px) {
+    .footer-subscribe {
+        margin-left: 80px;
+    }
+}
+
 .footer-subscribe-text {
     font-weight: 500;
     font-size: 16px;
@@ -585,9 +951,22 @@ button {
     margin-bottom: 16px;
 }
 
+ @media only screen and (min-width:768px) {
+    .footer-subscribe-text {
+         text-align: left;
+     }
+ }
+
 .footer-subscribe-form {
     display: flex;
     gap: 24px;
+}
+
+@media only screen and (min-width:768px) {
+    .footer-subscribe-form {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .footer-subscribe-form-label-input {
@@ -602,6 +981,12 @@ button {
     letter-spacing: 0.04em;
     padding-left: 16px;
     color: #ffffff;
+}
+
+@media only screen and (min-width:1158px) {
+    .footer-subscribe-form-label-input {
+        width: 264px;
+    }
 }
 
 .footer .input::placeholder {
@@ -631,6 +1016,12 @@ button {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width:768px) {
+    .footer-subscribe-btn {
+        margin: 0;
+    }
 }
 
 .footer-subscribe-btn:hover,
